@@ -1,0 +1,370 @@
+/* 
+:root {
+    --main-color: #323946;
+    --colorideias: #8b8989;
+} */
+
+
+/* ------card mean  */
+
+.card-ideia {
+    width: 100%;
+    align-items: top;
+    padding: 20px 20px 50px 20px;
+    display: none;
+}
+
+.card-ideia.active {
+    display: block;
+}
+
+.wrapper {
+    margin: 0px;
+    display: grid;
+    padding: 0 20px;
+    gap: 20px;
+    /* grid-template-columns: repeat(auto-fill, 225px); */
+    /* grid-template-columns: repeat(auto-fill, 335px); */
+    grid-template-columns: repeat(3, 1fr);
+    /* border: 1px solid #00eeff; */
+    margin-bottom: 20px;
+
+}
+
+.wrapper li {
+    height: 210px;
+    list-style: none;
+    border-radius: 5px;
+    padding: 15px 20px 20px;
+    /* background: var(--main-color); */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.add-box,
+.icon,
+.bottom-content,
+.popup,
+header,
+.settings .menu li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.add-box {
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    /* background: var(--main-color); */
+    border: 1px dashed #00eeff;
+}
+
+.add-box .icon {
+    height: 78px;
+    width: 78px;
+    color: #00eeff;
+    font-size: 40px;
+    border-radius: 50%;
+    justify-content: center;
+    border: 1px solid #00eeff;
+}
+
+.add-box p {
+    color: white;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+.ideia {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* /////cor das notas */
+    background: #323946;
+}
+
+.ideia .details {
+    max-height: 165px;
+    overflow-y: auto;
+
+}
+
+.ideia .details::-webkit-scrollbar,
+.popup textarea::-webkit-scrollbar {
+    width: 0;
+}
+
+.ideia .details:hover::-webkit-scrollbar,
+.popup textarea:hover::-webkit-scrollbar {
+    width: 5px;
+}
+
+.ideia .details:hover::-webkit-scrollbar-track,
+.popup textarea:hover::-webkit-scrollbar-track {
+    background: #1f242d;
+    border-radius: 25px;
+}
+
+.ideia .details:hover::-webkit-scrollbar-thumb,
+.popup textarea:hover::-webkit-scrollbar-thumb {
+    background: #1f242d;
+    border-radius: 25px;
+}
+
+.ideia p {
+    font-size: 22px;
+    font-weight: 500;
+    color: #00eeff;
+}
+
+.ideia span {
+    display: block;
+    color: white;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+
+.ideia .bottom-content {
+    padding-top: 10px;
+    border-top: 1px solid #1f242d;
+}
+
+.bottom-content span {
+    color: wheat;
+    font-size: 14px;
+}
+
+.bottom-content .settings {
+    position: relative;
+}
+
+.bottom-content .settings i {
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.settings .menu {
+    z-index: 1;
+    bottom: 0;
+    right: -5px;
+    padding: 5px 0;
+    background: #323946;
+    position: absolute;
+    border-radius: 4px;
+    transform: scale(0);
+    transform-origin: bottom right;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease;
+    border: 1px solid #1f242d;
+}
+
+.settings.show .menu {
+    transform: scale(1);
+}
+
+.settings .menu li {
+    height: 25px;
+    font-size: 16px;
+    margin-bottom: 2px;
+    padding: 17px 15px;
+    cursor: pointer;
+    box-shadow: none;
+    border-radius: 0;
+    justify-content: flex-start;
+}
+
+.menu li:last-child {
+    margin-bottom: 0;
+}
+
+.menu li:hover {
+    background: #8b8989;
+}
+
+.menu li i {
+    padding-right: 8px;
+}
+
+.popup-box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.popup-box .popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 3;
+    width: 100%;
+    max-width: 400px;
+    justify-content: center;
+    transform: translate(-50%, -50%) scale(0.95);
+}
+
+.popup-box,
+.popup {
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.25s ease;
+}
+
+.popup-box.show,
+.popup-box.show .popup {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.popup-box.show .popup {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.popup .content-ideia {
+    position: relative;
+    border-radius: 5px;
+    background: #323946;
+    width: calc(100% - 15px);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.content-ideia header {
+    padding: 15px 25px;
+    border-bottom: 1px solid #323946;
+}
+
+.content-ideia header p {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.content-ideia header i {
+    color: #8b8989;
+    cursor: pointer;
+    font-size: 23px;
+}
+
+.content-ideia header i {
+    color: #8b8989;
+    cursor: pointer;
+    font-size: 23px;
+}
+
+header .switcher-btn .bx {
+    color: #8b8989;
+}
+
+.switcher-btn .bx:hover {
+    color: white;
+}
+
+.content-ideia form {
+    margin: 15px 25px 35px;
+}
+
+.content-ideia form .row {
+    margin-bottom: 20px;
+}
+
+form .row label {
+    font-size: 18px;
+    display: block;
+    margin-bottom: 6px;
+}
+
+form :where(input, textarea) {
+    height: 50px;
+    width: 100%;
+    outline: none;
+    font-size: 17px;
+    padding: 0 15px;
+    border-radius: 4px;
+    border: 1px solid #6D6D6D;
+    background: #1f242d;
+    color: white;
+}
+
+form :where(input, textarea):focus {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.11);
+}
+
+form .row textarea {
+    height: 150px;
+    resize: none;
+    padding: 8px 15px;
+    background: #1f242d;
+}
+
+form button {
+    width: 100%;
+    height: 40px;
+    color: black;
+    font-weight: bold;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 17px;
+    border-radius: 4px;
+    background: #00eeff;
+    box-shadow: 0 0 1px #0ef;
+}
+
+form button:hover {
+    background: white;
+    box-shadow: 0 0 5px white;
+}
+
+
+
+@media (max-width: 660px) {
+    .wrapper {
+        margin: 15px;
+        gap: 15px;
+        grid-template-columns: repeat(auto-fill, 100%);
+    }
+
+    .popup-box .popup {
+        max-width: calc(100% - 15px);
+    }
+
+    .bottom-content .settings i {
+        font-size: 17px;
+    }
+}
+
+.head-title {
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.content-ideia header .uil:hover {
+    color: red;
+}
+
+/* //////////////////stars */
+
+.detal-idea .stars {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 0px 20px;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.stars i {
+    color: #e6e6e6;
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.stars i.active {
+    color: #ff9c1a;
+}

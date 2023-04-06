@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <!-- //style project -->
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/principal.css">
+    <link rel="stylesheet" href="style/anotacoes.css">
+    <link rel="stylesheet" href="style/ideias.css">
+
+    <title>Principal</title>
+</head>
+
+<body>
+    <!-- ---------Navegation Menu------------ -->
+    <div class="container">
+        <div class="navegation">
+            <ul>
+                <li class="list">
+                    <a href="">
+                        <span class="icon"><img src="img/favicon.ico"></span>
+                        <span class="title" id="title-logo">ProConnect</span>
+                    </a>
+                </li>
+
+                <li class="list active" id="li1">
+                    <a href="#">
+                        <span class="icon"><i class='bx bx-home'></i></span>
+                        <span class="title">Home</span>
+                    </a>
+                </li>
+
+                <li class="list" id="li2">
+                    <a href="#">
+                        <span class="icon"><i class='bx bx-note'></i></span>
+                        <span class="title">Minhas Anotações</span>
+                    </a>
+                </li>
+
+                <li class="list" id="li3">
+                    <a href="#">
+                        <span class="icon"><i class='bx bx-task'></i></span>
+                        <span class="title">Minhas Tarefas</span>
+                    </a>
+                </li>
+
+                <li class="list" id="li4">
+                    <a href="#">
+                        <span class="icon"><i class='bx bx-bulb'></i></ion-icon></span>
+                        <span class="title">Minhas ideias</span>
+                    </a>
+                </li>
+
+                <li class="list" id="li5">
+                    <a href="#">
+                        <span class="icon"><i class='bx bx-briefcase-alt-2'></i></span>
+                        <span class="title">Meus Projetos</span>
+                    </a>
+                </li>
+
+                <li class="list">
+                    <a href="#" id="li6">
+                        <span class="icon"><i class='bx bx-cog'></i></span>
+                        <span class="title">Configurações</span>
+                    </a>
+                </li>
+
+                <li class="list" id="li7">
+                    <a href="#">
+                        <span class="icon"><i class='bx bx-exit'></i></span>
+                        <span class="title">Sair</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- -----main------------->
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle"><i class='bx bx-menu'></i></div>
+                <div class="search">
+                    <label>
+                        <input type="text" placeholder="Buscar aqui">
+                        <i class='bx bx-search-alt-2'></i>
+                    </label>
+                </div>
+                <div class="user">
+                    <h2>Fabrícia Resende<br>Aluno</h2>
+                    <div class="photo">
+                        <img src="img/fr.jpg" alt="">
+                    </div>
+                </div>
+                <div class="icon-dl">
+                    <img src="img/sun.png" class='toggle-icon' id="icon">
+                </div>
+            </div>
+            <!-- -------Tela individual -->
+            <div class="card-mean">
+                <!-- --------------Cards Hello User----------- -->
+                <div class="content-left">
+                    <div class="cong-box">
+                        <div class="content-calendar">
+                            <p class="head">Olá Fabrícia!</p>
+                            <p>Responda suas tarefas semanais e
+                                observe as novas notificações.
+                            </p>
+                        </div>
+                        <img src="img/Website Creator-bro.svg" alt="">
+                    </div>
+                    <!-- -----------card-page -->
+                    <div class="containe-mural">
+                        <div class="card-page">
+                            <a href="#">
+                                <div class="box-page">
+                                    <div class="content-page">
+                                        <img src="img/undraw_prototyping_process_re_7a6p.svg" alt="">
+                                        <h3>Mural de Projetos</h3>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="card-page">
+                            <a href="#">
+                                <div class="box-page">
+                                    <div class="content-page">
+                                        <img src="img/Sharing Ideas-bro (1).svg" alt="">
+                                        <h3>Mural de notes</h3>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="card-page">
+                            <a href="#">
+                                <div class="box-page">
+                                    <div class="content-page">
+                                        <img src="img/Documents-bro (1).svg" alt="">
+                                        <h3>Mural de Modelos de Documentos</h3>
+
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!--  -->
+
+
+
+                    </div>
+                </div>
+                <div class="content-right">
+
+
+                    <div class="box-calnot">
+                        <!-- --------------Cadendar----------- -->
+                        <div class="calendar">
+                            <div class="calendar-header">
+                                <span class="month-picker" id="month-picker">Março</span>
+                                <div class="year-picker">
+                                    <span class="year-change" id="prev-year">
+                                        <pre><</pre>
+                                    </span>
+                                    <span id="year">2023</span>
+                                    <span class="year-change" id="next-year">
+                                        <pre>></pre>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="calendar-body">
+                                <div class="calendar-week-day">
+                                    <div>Dom</div>
+                                    <div>Seg</div>
+                                    <div>Ter</div>
+                                    <div>Qua</div>
+                                    <div>Qui</div>
+                                    <div>Sex</div>
+                                    <div>Sab</div>
+                                </div>
+                                <div class="calendar-days">
+                                    <div>
+                                        1
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+
+                                    </div>
+                                    <div>2</div>
+                                    <div>3</div>
+                                    <div>4</div>
+                                    <div>5</div>
+                                    <div>6</div>
+                                    <div>7</div>
+                                    <div>1</div>
+                                    <div>2</div>
+                                    <div>3</div>
+                                    <div>4</div>
+                                    <div>5</div>
+                                    <div>6</div>
+                                    <div>7</div>
+
+                                </div>
+                            </div>
+                            <div class="month-list"></div>
+                        </div>
+                        <div class="notification">
+                            <h2>Notificações</h2>
+
+                            <div class="alert">
+                                <span class="icon-alert">
+                                    <i class='bx bx-file'></i>
+                                </span>
+                                <div class="text-alert">
+                                    <!-- <strong>Tarefas</strong> tirar -->
+                                    <p>Você tem novas tarefas</p>
+                                </div>
+
+                                <button class="close">
+                                    <i class='bx bx-x'></i>
+                                </button>
+                            </div>
+
+                            <div class="alert alert-project">
+                                <span class="icon-alert">
+                                    <i class='bx bxs-calendar-event'></i>
+                                </span>
+                                <div class="text-alert">
+                                    <!-- <strong>Área de projetos</strong> tirar -->
+                                    <p>Você possui uma notificação do projeto A</p>
+                                </div>
+
+                                <button class="close">
+                                    <i class='bx bx-x'></i>
+                                </button>
+                            </div>
+
+                            <div class="alert alert-ideas">
+                                <span class="icon-alert">
+                                    <i class='bx bxs-bulb'></i>
+                                </span>
+                                <div class="text-alert">
+                                    <!-- <strong>Área de idéias</strong> tirar -->
+                                    <p>Você recebeu um novo feedback</p>
+                                </div>
+
+                                <button class="close">
+                                    <i class='bx bx-x'></i>
+                                </button>
+                            </div>
+
+                            <div class="alert alert-system">
+                                <span class="icon-alert">
+                                    <i class='bx bx-error-alt'></i>
+                                </span>
+                                <div class="text-alert">
+                                    <!-- <strong>Sistema</strong> tirar -->
+                                    <p>atualize seus dados pessoais</p>
+                                </div>
+
+                                <button class="close">
+                                    <i class='bx bx-x'></i>
+                                </button>
+                            </div>
+
+                            <div class="alert alert-murals">
+                                <span class="icon-alert">
+                                    <i class='bx bxs-notification'></i>
+                                </span>
+                                <div class="text-alert">
+                                    <!-- <strong>Murais</strong> tirar -->
+                                    <p>Novas pesquisas cadastradas</p>
+                                </div>
+
+                                <button class="close">
+                                    <i class='bx bx-x'></i>
+                                </button>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card-note">
+                <div class="addnote-content">
+                    <div class="icon-plus"><i class="uil uil-plus"></i></div>
+                    <p>Add nova nota</p>
+                </div>
+                <div class="content-note">
+                </div>
+            </div>
+            <div class="card-ideia">
+                <div class="popup-box">
+                    <div class="popup">
+                        <div class="content-ideia">
+                            <header>
+                                <p></p>
+                                <i class="uil uil-times"></i>
+                            </header>
+                            <form action="#">
+                                <div class="row title">
+                                    <label>Título</label>
+                                    <input type="text" spellcheck="false">
+                                </div>
+                                <div class="row description">
+                                    <label>Descrição</label>
+                                    <textarea id="texto_ideia" spellcheck="false"></textarea>
+                                </div>
+                                <button></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wrapper">
+                    <li class="add-box">
+                        <div class="icon"><i class="uil uil-plus"></i></div>
+                        <p>Add nova ideia</p>
+                    </li>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script src="script/main.js"></script>
+    <script src="script/Viewprincipal.js"></script>
+    <script src="script/Viewanotacoes.js"></script>
+    <script src="script/Viewideias.js"></script>
+</body>
+
+</html>

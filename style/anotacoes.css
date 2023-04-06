@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: #323946;
+}
+
+/* ------Anotações - style  */
+
+.card-note.active {
+    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 20px 15px;
+}
+
+.card-note {
+    display: none;
+}
+
+.addnote-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    border: 1px dashed #00eeff;
+    height: 170px;
+    cursor: pointer;
+}
+
+.icon-plus {
+    border: 1px solid;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    margin: 15px;
+    font-size: xx-large;
+}
+
+.icon-plus i {
+    color: #00eeff;
+}
+
+
+.content-note {
+    display: contents;
+}
+
+textarea {
+    padding: 10px;
+    padding-top: 30px;
+    outline: none;
+    resize: none;
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    width: 200px;
+    height: 170px;
+    color: black;
+}
+
+textarea::-webkit-scrollbar {
+    width: 4px;
+}
+
+textarea::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #4B4453;
+}
+
+
+.item {
+    position: relative;
+    width: 200px;
+    height: 170px;
+}
+
+.head-note {
+    background-color: #323946;
+}
+
+.remove {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 93%;
+    right: 6px;
+    cursor: pointer;
+    font-size: 23px;
+    font-weight: bold;
+    border-bottom: 1px solid #41464f;
+}
+
+.remove .uil {
+    color: black;
+}
+
+.remove .bx {
+    color: #323946;
+    font-size: 20px;
+}
+
+.remove i:hover {
+    color: red;
+}
+
+.color-picker {
+    position: absolute;
+    top: 2px;
+    left: 30px;
+    border-radius: 5%;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    /* background: transparent; */
+}
