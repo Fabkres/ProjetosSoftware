@@ -41,7 +41,7 @@
 }
 
 .add-box,
-.icon,
+.iconplus,
 .bottom-content,
 .popup,
 header,
@@ -59,7 +59,7 @@ header,
     border: 1px dashed #00eeff;
 }
 
-.add-box .icon {
+.add-box .iconplus {
     height: 78px;
     width: 78px;
     color: #00eeff;
@@ -361,7 +361,6 @@ form button:hover {
 .stars i {
     color: #e6e6e6;
     font-size: 20px;
-    cursor: pointer;
     transition: color 0.2s ease;
 }
 

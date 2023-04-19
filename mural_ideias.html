@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon2.ico">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style/mural_ideias.css">
+    <link rel="stylesheet" href="style/main.css">
+    <title>ideias</title>
+</head>
+
+<body>
+
+    <!-- ---------Navegation Menu------------ -->
+    <div class="main_mural_ideia">
+        <div class="topbar">
+            <div class="toggle"><a href="principal.html"><i class='bx bx-arrow-back'></i></a></div>
+            <div class="search">
+                <label>
+                    <input type="text" placeholder="Buscar aqui">
+                    <i class='bx bx-search-alt-2'></i>
+                </label>
+            </div>
+            <div class="user">
+                <h2>Fabrícia Resende<br>Aluno</h2>
+                <div class="photo">
+                    <img src="img/fr.jpg" alt="">
+                </div>
+            </div>
+            <div class="icon-dl">
+                <img src="img/sun.png" class='toggle-icon' id="icon">
+            </div>
+        </div>
+
+        <div class="mural-ideia">
+            <h3 class="txt">Mural de <span>Ideias</span></h3>
+            <div class="main-ideia">
+                <div class="card-ideia">
+                    <div class="popup-box">
+                        <div class="popup">
+                            <div class="content-ideia">
+                                <header>
+                                    <p></p>
+                                    <i class="uil uil-times"></i>
+                                </header>
+                                <form action="#">
+                                    <div class="row title">
+                                        <label>Título</label>
+                                        <input type="text" spellcheck="false">
+                                    </div>
+                                    <div class="row description">
+                                        <label>Descrição</label>
+                                        <textarea spellcheck="false"></textarea>
+                                    </div>
+                                    <button></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <li class="add-box">
+                            <div class="icon"><i class="uil uil-plus"></i></div>
+                            <p>Add nova ideia</p>
+                        </li>
+                    </div>
+                </div>
+                <div class="card-profile">
+                    <div class="profile-description">
+                        <!-- <div class="description"></div> -->
+                        <div class="wrapper-profile">
+                            <div class="img-area-profile">
+                                <div class="inner-area">
+                                    <img src="img/fr.png" alt="">
+                                </div>
+                            </div>
+                            <div id="name">Fabricia Resende</div>
+                            <hr class="horizon">
+                            <div class="info">
+                                <p>user: <span class="span-profile" id="user">@fabres</span> </p>
+                                <p>Curso: <span class="span-profile" id="curse">Eng. Computação</span> </p>
+                                <p>Contato: <span class="span-profile" id="phone">xxxxx-xxxx</span> </p>
+                                <p>E-mail: <span class="span-profile" id="email">fabricia@dcomp</span> </p>
+                                <p>Curriculo: <span class="span-profile" id="link">https//fabricia.lattes.br</span> </p>
+                            </div>
+                            <button id="btn-profile">Mostar interesse</button>
+                        </div>
+                        <i class='bx bx-chevrons-right toggle-profile'></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script/Viewmural_ideias.js"></script>
+    <script src="script/main.js"></script>
+</body>
+
+
+</html>

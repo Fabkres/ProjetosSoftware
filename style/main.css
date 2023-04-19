@@ -10,7 +10,7 @@
 body {
     min-height: 100vh;
     overflow-x: hidden;
-    background: #323946;
+    background: #1f242d;
 }
 
 .container {
@@ -20,7 +20,7 @@ body {
 
 .navegation {
     position: fixed;
-    width: 250px;
+    width: 65px;
     height: 100%;
     background: #323946;
     border-left: 10px solid #323946;
@@ -28,10 +28,44 @@ body {
     overflow-x: hidden;
 }
 
+.navegation .menu-sub {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.navegation .menu-sub .subi {
+
+    color: white;
+    margin-right: 8px;
+    margin-bottom: 131px;
+    margin-right: -140px;
+    font-size: 25px;
+    cursor: pointer;
+    /* position: absolute; */
+    margin-bottom: 55px;
+    top: 12px;
+    display: flex;
+    position: relative;
+    left: 8px;
+}
+
 
 .navegation.active {
-    width: 65px;
+    width: 250px;
 }
+
+.subi.active {
+    transform: rotate(-90deg);
+}
+
+.navegation .menu-sub .subi:hover {
+    color: #00eeff;
+    background-color: black;
+    border-radius: 50%;
+}
+
 
 .navegation ul {
     position: absolute;
@@ -40,7 +74,7 @@ body {
     width: 100%;
 }
 
-.navegation ul li {
+.navegation ul .list {
     position: relative;
     width: 100%;
     list-style: none;
@@ -50,22 +84,22 @@ body {
     margin-bottom: 20px;
 }
 
-.navegation ul li.active {
+.navegation ul .list.active {
     background: #1f242d;
     height: 40px;
 }
 
-.navegation ul li:hover a {
-    color: #00eeff;
+.navegation ul .list:hover {
+    background-color: #1f242d;
 }
 
-.navegation ul li:nth-child(1) {
+.navegation ul .list:nth-child(1) {
     margin-bottom: 70px;
     pointer-events: none;
 }
 
 
-.navegation ul li a {
+.navegation ul .list a {
     position: relative;
     display: block;
     width: 100%;
@@ -79,7 +113,7 @@ body {
     color: black;
 } */
 
-.navegation ul li a .icon {
+.navegation ul .list a .icon {
     position: relative;
     display: block;
     min-width: 50px;
@@ -88,12 +122,12 @@ body {
     text-align: center;
 }
 
-.navegation ul li a .icon i {
+.navegation ul .list a .icon i {
     font-size: 1.5rem;
     /* color: #00eeff; */
 }
 
-.navegation ul li a .title {
+.navegation ul .list a .title {
     position: relative;
     display: block;
     padding: 0 10px;
@@ -101,6 +135,58 @@ body {
     line-height: 50px;
     text-align: start;
     white-space: nowrap;
+}
+
+.navegation .sub-menu {
+    padding: 31px -42px -11px 80px;
+    margin-top: -60px;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    background: #1f242d;
+    border-top-left-radius: 22px;
+    border-bottom-left-radius: 22px;
+    padding: 44px 0px 12px;
+    /* display: none; */
+    visibility: hidden;
+    /* transition: 0.5s ease all; */
+    list-style: none;
+}
+
+.sub-menu.active {
+    visibility: visible;
+}
+
+.navegation .sub-menu li {
+    font-size: 15px;
+    padding: 5px 5px 5px 90px;
+
+    /* width: 100%; */
+    text-align: justify;
+    border-top-left-radius: 22px;
+    border-bottom-left-radius: 22px;
+    z-index: 3;
+
+}
+
+.navegation .sub-menu li a {
+    text-decoration: none;
+    color: wheat;
+    font-weight: 500;
+    border-left: 2px solid gray;
+    padding: 4px;
+}
+
+
+.sub-menu .sub-list:hover,
+.sub-menu .sub-list.active {
+    background: #323946;
+    cursor: pointer;
+}
+
+.bx {
+    color: white;
 }
 
 #title-logo {
@@ -111,14 +197,14 @@ body {
 }
 
 .icon img {
-    width: 40px;
+    width: 55px;
     margin-top: 15px;
 }
 
 
 /* ------ curva no right----- */
 /* .navegation ul li:hover a::before, */
-.navegation ul li.active a::before {
+.navegation ul .list.active a::before {
     content: '';
     position: absolute;
     right: 0;
@@ -132,7 +218,7 @@ body {
 }
 
 /* .navegation ul li:hover a::after, */
-.navegation ul li.active a::after {
+.navegation ul .list.active a::after {
     content: '';
     position: absolute;
     right: 0;
@@ -149,8 +235,8 @@ body {
 
 .main {
     position: absolute;
-    width: calc(100% - 250px);
-    left: 250px;
+    width: calc(100% - 65px);
+    left: 65px;
     min-height: 100vh;
     background: #1f242d;
     transition: 0.5s;
@@ -158,22 +244,10 @@ body {
 }
 
 .main.active {
-    width: calc(100% - 65px);
-    left: 65px;
+    width: calc(100% - 250px);
+    left: 250px;
 }
 
-
-
-.topbar {
-    width: 100%;
-    height: 60px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 10px;
-
-    /* border: 4px solid red; */
-}
 
 .content-left {
     /* border: 2px solid rebeccapurple; */
@@ -187,8 +261,27 @@ body {
 }
 
 
+.topbar {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    background: #1f242d;
+    /* border: 4px solid red; */
+}
 
 
+
+.topbar .toggle-icon {
+    margin-right: 30px;
+    font-size: 22px;
+    color: white;
+    margin: 1px;
+    cursor: pointer;
+    padding: 0 1rem;
+}
 
 .toggle {
     position: relative;

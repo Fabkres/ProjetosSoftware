@@ -121,26 +121,10 @@ function star_feedback(ideiaId) {
         // Define o estado inicial das estrelas de acordo com o valor recuperado do local storage
         star.classList.toggle("active", initialStars[index1]);
 
-        star.addEventListener("click", () => {
-            stars.forEach((s, index2) => {
-                // Ative as estrelas anteriores, bem como a estrela atual
-                if (index2 <= index1) {
-                    initialStars[index2] = true;
-                    s.classList.add("active");
-                }
-                // Desative as estrelas subsequentes
-                else {
-                    initialStars[index2] = false;
-                    s.classList.remove("active");
-                }
-            });
-
-
-            // Atualiza o vetor de status de estrelas no local storage
-            updateStars(ideiaId, initialStars);
-        });
     });
 }
+
+
 addBtn.addEventListener("click", e => {
     e.preventDefault();
     let title = titleTag.value.trim(),

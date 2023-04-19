@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="favicon2.ico">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <!-- //style project -->
@@ -13,6 +13,10 @@
     <link rel="stylesheet" href="style/principal.css">
     <link rel="stylesheet" href="style/anotacoes.css">
     <link rel="stylesheet" href="style/ideias.css">
+    <link rel="stylesheet" href="style/photo_profile.css">
+    <link rel="stylesheet" href="style/termProfile.css">
+    <link rel="stylesheet" href="style/profile.css">
+    <!-- <link rel="stylesheet" href="style/profile.css"> -->
 
     <title>Principal</title>
 </head>
@@ -24,7 +28,7 @@
             <ul>
                 <li class="list">
                     <a href="">
-                        <span class="icon"><img src="img/favicon.ico"></span>
+                        <span class="icon"><img src="img/favicon2.ico"></span>
                         <span class="title" id="title-logo">ProConnect</span>
                     </a>
                 </li>
@@ -42,14 +46,6 @@
                         <span class="title">Minhas Anotações</span>
                     </a>
                 </li>
-
-                <li class="list" id="li3">
-                    <a href="#">
-                        <span class="icon"><i class='bx bx-task'></i></span>
-                        <span class="title">Minhas Tarefas</span>
-                    </a>
-                </li>
-
                 <li class="list" id="li4">
                     <a href="#">
                         <span class="icon"><i class='bx bx-bulb'></i></ion-icon></span>
@@ -65,11 +61,21 @@
                 </li>
 
                 <li class="list">
-                    <a href="#" id="li6">
-                        <span class="icon"><i class='bx bx-cog'></i></span>
-                        <span class="title">Configurações</span>
-                    </a>
+                    <div class="menu-sub">
+                        <!-- <a href="#" id="li6" style="border-top: 1px solid grey;"> -->
+                        <a href="#" id="li6">
+                            <span class="icon"><i class='bx bx-cog'></i></span>
+                            <span class="title">Configurações</i></span>
+                            <!-- <i class='bx bxs-chevron-down subi' id="show-sub-menu"></i> -->
+                        </a>
+                    </div>
+
                 </li>
+                <div class="sub-menu">
+                    <li class="sub-list" id="li61"><a href="#">Perfil</a></li>
+                    <li class="sub-list" id="li62"><a href="#">Foto</a></li>
+                    <li class="sub-list" id="li63"><a href="#">Termos</a></li>
+                </div>
 
                 <li class="list" id="li7">
                     <a href="#">
@@ -127,18 +133,18 @@
                         </div>
 
                         <div class="card-page">
-                            <a href="#">
+                            <a href="mural_ideias.html">
                                 <div class="box-page">
                                     <div class="content-page">
                                         <img src="img/Sharing Ideas-bro (1).svg" alt="">
-                                        <h3>Mural de notes</h3>
+                                        <h3>Mural de Ideias</h3>
                                     </div>
                                 </div>
                             </a>
                         </div>
 
                         <div class="card-page">
-                            <a href="#">
+                            <a href="mural_documentos.html">
                                 <div class="box-page">
                                     <div class="content-page">
                                         <img src="img/Documents-bro (1).svg" alt="">
@@ -322,22 +328,195 @@
 
                 <div class="wrapper">
                     <li class="add-box">
-                        <div class="icon"><i class="uil uil-plus"></i></div>
+                        <div class="iconplus"><i class="uil uil-plus"></i></div>
                         <p>Add nova ideia</p>
                     </li>
                 </div>
             </div>
+            <div class="config-profile">
+                <div class="container-profile">
+
+                    <form action="#">
+                        <div class="form-fist">
+                            <div class="details-profile personal">
+                                <h3 id="h3">Configure Seu Perfil</h3>
+
+                                <div class="fields">
+                                    <div class="input-box-field">
+                                        <span class="details">Nome completo</span>
+                                        <input type="text" placeholder="Entre com seu nome completo" required>
+                                    </div>
+
+                                    <div class="input-box-field">
+                                        <span class="details">Usuário</span>
+                                        <input type="text" placeholder="Enter com seu usuário" required>
+                                    </div>
+
+
+                                    <div class="input-box-field">
+                                        <span class="details">CPF</span>
+                                        <input type="cpf" placeholder="Entre com seu CPF" required>
+                                    </div>
+
+
+                                    <div class="input-box-field">
+                                        <span class="details">Email</span>
+                                        <input type="email" placeholder="Entre com seu email" required>
+                                    </div>
+
+
+                                    <div class="input-box-field">
+                                        <span class="details">Senha</span>
+                                        <input type="password" placeholder="Entre com sua senha" required>
+                                    </div>
+
+                                    <div class="input-box-field">
+                                        <span class="details">Confime sua senha</span>
+                                        <input type="password" placeholder="Confirme sua senha" required>
+                                    </div>
+
+
+                                    <div class="input-box-field">
+                                        <span class="details">Departamento</span>
+                                        <input type="text" name="department" placeholder="Informe seu Departamento">
+                                    </div>
+
+                                    <div class="input-box-field">
+                                        <span class="details">Curso</span>
+                                        <input type="text" name="curse" placeholder="Informe seu curso">
+                                    </div>
+
+
+                                    <div class="input-box-field">
+                                        <span class="details">Número para contato</span>
+                                        <input type="tel" name="phone" placeholder="(xx) xxxx-xxxx">
+                                    </div>
+
+
+                                    <div class="input-box-field">
+                                        <span class="details">Link do currículo</span>
+                                        <input type="text" name="linkCL" placeholder="Link do currículo Lattes">
+
+                                        <div class="gender-title">
+                                            <h6>Gênero</h6>
+                                        </div>
+                                        <div class="gender-group-profile">
+                                            <div class="gender-input-radio">
+                                                <input type="radio" id="female" name="gender">
+                                                <label for="female">Feminino</label>
+                                            </div>
+                                            <div class="gender-input-radio">
+                                                <input type="radio" id="male" name="gender">
+                                                <label for="male">Masculino</label>
+                                            </div>
+                                            <div class="gender-input-radio">
+                                                <input type="radio" id="none" name="gender">
+                                                <label for="none">Outros</label>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="input-box-field Textarea">
+                                        <span class="details">Biografia</span>
+                                        <textarea name="description" class="input-bio"
+                                            placeholder="Biografia"></textarea>
+                                    </div>
+
+                                    <div class="input-box-field">
+                                        <!-- <label for="">Linhas de pesquisa desejada</label> -->
+                                        <span class="details">Linhas de pesquisa desejada</span>
+                                        <input type="text" name="area1" placeholder="Linha de pesquisa 1">
+                                        <input type="text" name="area2" placeholder="Linha de pesquisa 2">
+                                        <input type="text" name="area3" placeholder="Linha de pesquisa 3">
+                                    </div>
+
+
+
+                                    <div class="btn-box">
+                                        <button type="button" id="profile-btn">Salvar</button>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="config-photo">
+                <div class="content-photo">
+                    <form>
+                        <h3>Atualize sua foto de perfil</h3>
+                        <!-- classe container -->
+                        <div class="photo-update">
+                            <h5>Faça upload de uma foto para seu perfil</h5>
+                            <div class="wrapper">
+                                <div class="image">
+                                    <img src="" alt="">
+                                </div>
+                                <!-- Classe content-photo -->
+                                <div class="profile-pic">
+                                    <div class="icon"><i class="fa-solid fa-user"></i></div>
+                                    <div class="text">Nenhuma foto escolhida!</div>
+                                </div>
+                                <div id="cancel-btn"> <i class="fa-solid fa-xmark"></i></div>
+                                <!-- não usa a classe file name -->
+                            </div>
+                            <input type="file" id="defalt-btn" hidden>
+                            <button type="button" onclick="defaultBtnActive()" id="custom-btn">
+                                <i class="fa-solid fa-cloud-arrow-up"></i>
+                                Escolha uma foto</button>
+                        </div>
+                        <div class="btn-box">
+                            <button type="button" id="salve">Salvar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="config-term">
+                <div class="content-term">
+                    <form id="Form4" action="">
+                        <h3>CONFIGURAÇÕES E PRIVACIDADE</h3>
+
+                        <div class="selection-terms">
+                            <div class="check-services">
+                                <input type="checkbox" class="check-box" id="checkbox1" onclick="checkeMe()">
+                                <label for="checkbox1">Mostre seu perfil para usuários conectados</label>
+                            </div>
+                            <div class="check-services">
+                                <input type="checkbox" class="check-box" id="checkbox2" onclick="checkeMe()">
+                                <label for="checkbox2">Mostrar os projetos que você está fazendo para professores e
+                                    alunos</label>
+                            </div>
+                            <div class="check-services">
+                                <input type="checkbox" class="check-box" id="checkbox3">
+                                <label for="checkbox3">Mostrar suas notes de projeto para outros alunos</label>
+                            </div>
+                        </div>
+                        <div class="btn-box">
+                            <button type="button" class="btn-submit" id="submit-btn">Salvar</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+
         </div>
     </div>
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
-    //Modulos JavaScript
     <script src="script/main.js"></script>
     <script src="script/Viewprincipal.js"></script>
     <script src="script/Viewanotacoes.js"></script>
     <script src="script/Viewideias.js"></script>
+    <script src="script/photoProfile.js"></script>
+    <script src="script/termProfile.js"></script>
 </body>
 
 </html>

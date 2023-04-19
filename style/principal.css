@@ -475,7 +475,7 @@
 
 }
 
-.containe-mural .card-page {
+.card-page {
     position: relative;
     width: 220px;
     height: 250px;
@@ -486,6 +486,9 @@
     border-radius: 5px;
     margin: 20px 10px;
 }
+
+.card-page.active {}
+
 
 .containe-mural .card-page .box-page {
     position: absolute;
@@ -521,15 +524,6 @@
 
 .containe-mural .card-page .box-page .content-page img {
     width: 120px;
-}
-
-.topbar .toggle-icon {
-    margin-right: 30px;
-    font-size: 22px;
-    color: white;
-    margin: 1px;
-    cursor: pointer;
-    padding: 0 1rem;
 }
 
 /* ////////control-icon */
