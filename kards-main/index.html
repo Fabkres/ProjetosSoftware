@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <link rel="manifest" href="icons/site.webmanifest">
+    <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#fff">
+    <link rel="shortcut icon" href="icons/favicon.ico">
+    <meta name="apple-mobile-web-app-title" content="Listas">
+    <meta name="application-name" content="Listas">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="msapplication-config" content="icons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/topBar.css">
+    <!-- <link rel="icon" href="favicon2.ico"> -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Listas | Quadro Kanban</title>
+</head>
+
+<body>
+
+    <div class="topbar">
+        <div class="toggle"><a href="#"><i class='bx bx-arrow-back'></i></a></div>
+        <div class="search">
+            <label>
+                <input type="text" placeholder="Buscar aqui">
+                <i class='bx bx-search-alt-2'></i>
+            </label>
+        </div>
+        <div class="user">
+            <h2>Fabrícia Resende<br>Aluno</h2>
+            <div class="photo">
+                <img src="img/fr.jpg" alt="">
+            </div>
+        </div>
+        <div class="icon-dl">
+            <img src="img/sun.png" class='toggle-icon' id="icon">
+        </div>
+    </div>
+
+    <div class="kanban-project">
+        <header>
+            <div class="header-flex">
+                <span id="sidebar-button"><i class="fa fa-list"></i></span>
+                <h1 id="title" class="text-align-center">Listas</h1>
+                <span class="title-actions-container" style="font-size:25px;cursor:pointer;letter-spacing: 1ch;">
+                    <label for="auto-save" class="auto-save-text">Automático</label>
+                    <label class="switch" id="auto-save-label">
+                        <input id="auto-save" type="checkbox" checked>
+                        <span class="slider round"></span>
+                    </label>
+                    <i title="Apague essa lista." id="delete-button" class="fa fa-trash"></i>
+                    <i title="Salve todas as listas." id="save-button" class="fa fa-floppy-o"></i>
+                    <!-- <i title="Configurações" id="settings-button" class="fa fa-gear"></i> -->
+                </span>
+            </div>
+        </header>
+
+
+        <div id="sidebar" class="sidenav">
+            <span id="sidebar-close">&times;</span>
+            <p class="is-title">Quadros</p>
+            <ul id="boards-list">
+                <!-- Os Quadros serão listados aqui... -->
+            </ul>
+
+            <div class="flex-col">
+                <input type="text" id="add-board-text" name="add-board" placeholder="Add Quadro...">
+                <button id="add-board-button">Add Quadro</button>
+            </div>
+        </div>
+
+        <div id="card-context-menu" class="context-menu">
+            <!-- Clique com o botão direito do mouse no menu de contexto nos cartões. -->
+            <ul>
+                <li id="card-context-menu-delete">Apagar</li>
+                <li id="card-context-menu-clear">Limpar</li>
+                <li id="card-context-menu-duplicate">Duplicar</li>
+            </ul>
+        </div>
+
+        <div class="container" id="main-container">
+            <div id="cards-container">
+                <div id="add-card">
+                    <input maxlength="128" type="text" id="add-card-text" name="add-card" placeholder="Add Lista..."
+                        autofocus>
+                    <button id="add-card-button" class="plus-button">+</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="alert-container">
+            <div id="alerts">
+                <!-- Os alertas vão aqui -->
+            </div>
+        </div>
+
+        <div id="confirm-dialog" class="modal">
+            <div class="dialog-content">
+                <span id="confirm-dialog-close" class="confirm-dialog-close">&times;</span>
+                <div id="confirm-dialog-text" class="confirm-dialog-text"></div>
+                <div class="confirm-dialog-actions">
+                    <button id="confirm-dialog-cancel" class="confirm-dialog-cancel"> Cancelar </button>
+                    <button id="confirm-dialog-confirm" class="confirm-dialog-confirm"> Confirmar </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

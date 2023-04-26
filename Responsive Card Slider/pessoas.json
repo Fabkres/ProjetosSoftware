@@ -1,0 +1,74 @@
+{
+    "pessoas": [
+        {
+            "nome": "João Silva",
+            "genero": "m",
+            "titulo": "Projeto 1",
+            "departamento": "matemática",
+            "descricao": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quaerat maiores, expedita distinctio aperiam quas a eius ad culpa illum libero minima delectus quam quia vero quibusdam adipisci? Culpa, nobis.",
+            "status": "ativo",
+            "dataF": "30/04/2024",
+            "imagem": "images/DP1.jpg"
+        },
+        {
+            "nome": "Maria Souza",
+            "genero": "f",
+            "titulo": "Projeto 2",
+            "departamento": "computação",
+            "descricao": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quaerat maiores, expedita distinctio aperiam quas a eius ad culpa illum libero minima delectus quam quia vero quibusdam adipisci? Culpa, nobis.",
+            "status": "ativo",
+            "dataF": "30/04/2024",
+            "imagem": "images/showImg/appDev.jpg"
+        },
+        {
+            "nome": "Pedro Almeida",
+            "genero": "m",
+            "titulo": "Projeto 3",
+            "departamento": "arquitetura",
+            "descricao": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quaerat maiores, expedita distinctio aperiam quas a eius ad culpa illum libero minima delectus quam quia vero quibusdam adipisci? Culpa, nobis.",
+            "status": "inativo",
+            "dataF": "30/04/2024",
+            "imagem": "images/showImg/blogger.jpg"
+        },
+        {
+            "nome": "Ana Oliveira",
+            "titulo": "Projeto 4",
+            "genero": "f",
+            "departamento": "química",
+            "descricao": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quaerat maiores, expedita distinctio aperiam quas a eius ad culpa illum libero minima delectus quam quia vero quibusdam adipisci? Culpa, nobis.",
+            "status": "ativo",
+            "dataF": "30/04/2024",
+            "imagem": "images/showImg/photographer.jpg"
+        },
+        {
+            "nome": "Lucas Santos",
+            "titulo": "Projeto 5",
+            "genero": "x",
+            "departamento": "psicologia",
+            "descricao": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quaerat maiores, expedita distinctio aperiam quas a eius ad culpa illum libero minima delectus quam quia vero quibusdam adipisci? Culpa, nobis.",
+            "status": "inativo",
+            "dataF": "30/04/2024",
+            "imagem": "images/fr.png"
+        },
+        {
+            "nome": "Gabriela Mendes",
+            "titulo": "Projeto 6",
+            "genero": "f",
+            "descricao": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quaerat maiores, expedita distinctio aperiam quas a eius ad culpa illum libero minima delectus quam quia vero quibusdam adipisci? Culpa, nobis.",
+            "status": "inativo",
+            "departamento": "medicina",
+            "dataF": "30/04/2024",
+            "imagem": "images/showImg/dataAna.jpg"
+        },
+        {
+            "nome": "Rafaela Costa",
+            "titulo": "Projeto 7",
+            "genero": "f",
+            "departamento": "economia",
+            "descricao": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quaerat maiores, expedita distinctio aperiam quas a eius ad culpa illum libero minima delectus quam quia vero quibusdam adipisci? Culpa, nobis.",
+            "status": "ativo",
+            "dataF": "30/04/2024",
+            "imagem": "images/showImg/fullDev.jpg"
+        }
+    ]
+}

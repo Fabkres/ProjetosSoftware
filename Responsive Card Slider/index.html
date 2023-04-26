@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!-- Coding by CodingLab | www.codinglabweb.com -->
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-KB1nKll7Tru8WwCn7LdSbSfTVTfvxLBWt9XgFF4jskB2WXmx1zZLWUEo92Ft6ffAxQrH0c0HeWx9O9BzDlLhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="icon" href="favicon2.ico">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <title>ProjetosMural</title>
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <!-- ---------Navegation Menu------------ -->
+  <div class="main_mural_ideia">
+    <div class="topbar">
+      <div class="toggle"><a href="principal.html"><i class='bx bx-arrow-back'></i></a></div>
+      <div class="search">
+        <label>
+          <input type="text" placeholder="Buscar aqui">
+          <i class='bx bx-search-alt-2'></i>
+        </label>
+      </div>
+      <div class="user">
+        <h2>Fabrícia Resende<br>Aluno</h2>
+        <div class="photo">
+          <img src="images/fr.jpg" alt="">
+        </div>
+      </div>
+      <div class="icon-dl">
+        <img src="images/sun.png" class='toggle-icon' id="icon">
+      </div>
+    </div>
+
+    <div class="mural-projetos">
+      <div class="text-main">
+        <h2>Mural de <span>Projetos</span></h2>
+      </div>
+      <div class="container-project">
+        <!-- Projetos ativos -->
+        <h2 class="title-main">Projetos <span>Novos</span></h2>
+        <div class="cards-container swiper">
+          <div class="slide-container">
+            <div class="card-wrapper swiper-wrapper">
+            </div>
+          </div>
+          <div class="swiper-button-next swiper-navBtn"></div>
+          <div class="swiper-button-prev swiper-navBtn"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+        <!-- Projetos em andamento -->
+        <h2 class="title-main">Projetos <span>em Andamento</span></h2>
+        <div class="cards-container swiper">
+          <div class="slide-container">
+            <div class="card-wrapper swiper-wrapper">
+              <!-- adicione a nova div aqui que possue apenas o status vazio -->
+            </div>
+          </div>
+          <div class="swiper-button-next swiper-navBtn"></div>
+          <div class="swiper-button-prev swiper-navBtn"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+        <!-- Projetos inativos -->
+        <h2 class="title-main">Projetos <span>Inativos</span></h2>
+        <div class="cards-container swiper">
+          <div class="slide-container">
+            <div class="card-wrapper swiper-wrapper">
+              <!-- adicione a nova div aqui que possue apenas o status vazio -->
+            </div>
+          </div>
+          <div class="swiper-button-next swiper-navBtn"></div>
+          <div class="swiper-button-prev swiper-navBtn"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="js/swiper-bundle.min.js"></script>
+  <script src="js/people.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<!-- Coding by CodingLab | www.codinglabweb.com -->
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-KB1nKll7Tru8WwCn7LdSbSfTVTfvxLBWt9XgFF4jskB2WXmx1zZLWUEo92Ft6ffAxQrH0c0HeWx9O9BzDlLhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Responsive Card Slider</title>
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+    <div class="container-main">
+        <h2 class="title-main">Projetos <span>Abertos</span></h2>
+        <div class="container-project">
+            <div class="cards-container swiper">
+                <div class="slide-container">
+                    <div class="card-wrapper swiper-wrapper">
+                    </div>
+                </div>
+                <div class="swiper-button-next swiper-navBtn"></div>
+                <div class="swiper-button-prev swiper-navBtn"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        <!-- adicionar a nova div aqui -->
+        <h2 class="title-main">Projetos em <span>Andamento</span></h2>
+        <div class="container-project">
+            <div class="cards-container swiper">
+                <div class="slide-container">
+                    <div class="card-wrapper swiper-wrapper">
+                    </div>
+                </div>
+                <div class="swiper-button-next swiper-navBtn"></div>
+                <div class="swiper-button-prev swiper-navBtn"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="js/swiper-bundle.min.js"></script>
+    <script>
+
+        const cardsContainer = document.querySelector(".cards-container .swiper-wrapper");
+
+        fetch("pessoas.json")
+            .then(response => response.json())
+            .then(data => {
+                data.pessoas.forEach((pessoas, index) => {
+                    const card = document.createElement("div");
+                    card.classList.add("card", "swiper-slide");
+                    let gender = pessoas.genero === "f" ? "Profa. " : "Prof. ";
+
+                    card.innerHTML = `
+
+            <div class="card-show">
+                <div class="info">
+                    <h2>${pessoas.titulo}</h2>
+                    <p>${pessoas.descricao}</p>
+                    <p>Depart. de ${pessoas.departamento}</p>
+                    <p>${gender + pessoas.nome}</p>
+                    <p>Linhas de pesquisa</p>
+                    <ul class="linhas-pesquisas">
+                    <li>Primeira pesquisa</li>
+                    <li>Segunda pesquisa</li>
+                    <li>Terceira pesquisa</li>
+                    </ul>
+                    <p>Data final:${pessoas.data}</p>
+                    <button class="btn-cad">Cadastrar-se</button>
+                </div>
+            </div>
+            <div class="image-box">
+            <img src="${pessoas.imagem}" alt="${pessoas.titulo}" />
+            </div>
+            <div class="project-details">
+            <h2>${pessoas.titulo}</h2>
+            </div>
+            <div class="profile-details">
+            <div class="name-job">
+                <h3 class="name">${gender + pessoas.nome}</h3>
+                <h4 class="job">Depart. de ${pessoas.departamento}</h4>
+                </div>
+            </div>
+      `;
+                    const card_show = card.querySelector('.card-show');
+
+                    card.addEventListener('mouseover', () => {
+                        card_show.classList.add('show');
+                    });
+
+                    card.addEventListener('mouseout', () => {
+                        card_show.classList.remove('show');
+                    });
+
+                    cardsContainer.appendChild(card);
+                });
+            })
+            .catch(error => console.error(error));
+
+
+        var swiper = new Swiper(".slide-container", {
+            slidesPerView: 4,
+            spaceBetween: 20,
+            sliderPerGroup: 4,
+            loop: true,
+            centerSlide: "true",
+            fade: "true",
+            grabCursor: "true",
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+                dynamicBullets: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                },
+                520: {
+                    slidesPerView: 2,
+                },
+                768: {
+                    slidesPerView: 3,
+                },
+                1000: {
+                    slidesPerView: 4,
+                },
+            },
+        });
+
+    </script>
+
+</body>
+
+</html>

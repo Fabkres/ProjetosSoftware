@@ -1,0 +1,289 @@
+/* Google Fonts - Poppins */
+@import url("https://fonts.googleapis.com/css?family=DM+Sans:400,500,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1f242d;
+}
+
+.container-project {
+  min-height: 100vh;
+  margin-top: 20px;
+}
+
+.container-project .title-main {
+  color: #fff;
+  font-size: 30px;
+}
+
+.container-project .title-main span {
+  color: #00eeff;
+}
+
+.cards-container {
+  max-width: 1130px;
+  width: 100%;
+  padding: 40px 0;
+  /* border: 1px solid red; */
+  overflow: hidden;
+  min-height: 394px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+
+/* .slide-container::not(.card-show) { */
+.slide-container::not(.card-show) {
+  margin: 0 30px;
+  overflow: hidden;
+}
+
+.card {
+  /* background: #fff; */
+  border-radius: 5px;
+  background: #323946;
+  box-shadow: 0 0 5px black;
+}
+
+.card .image-box {
+  height: 150px;
+}
+
+.card .image-box img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px 5px 0 0;
+}
+
+.card .btn-showDiv {
+  position: absolute;
+  top: 43px;
+  right: 0;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.card .btn-showDiv i {
+  font-size: 22px;
+  color: #000;
+  background: #00eeff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+
+
+
+.card .imagem-inativa::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.7;
+  /* z-index: 1; */
+}
+
+
+
+.card .project-details h2 {
+  font-size: 16px;
+  color: white;
+  padding-left: 15px;
+}
+
+
+.card .profile-details {
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
+  padding: 0 15px 15px;
+  color: #bdbdbd;
+  z-index: 1;
+
+}
+
+
+/* apagar quando apaga o primeiro card */
+.card .profile-details img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+.profile-details .name {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.profile-details .job {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+
+
+.swiper-navBtn {
+  color: #000;
+  height: 40px;
+  width: 40px;
+  background: #00eeff;
+  border-radius: 50%;
+  font-weight: 800;
+  box-shadow: 0 0 4px #000;
+}
+
+.swiper-navBtn:hover {
+  background: #fff;
+  box-shadow: 0 0 4px #fff;
+
+}
+
+/* 
+.card-show {
+  padding: 20px;
+  z-index: 100;
+  border-radius: 5px;
+  background: #4c5264;
+  height: 363px;
+  position: absolute;
+  left: 282px;
+  width: 390px;
+  transition: opacity 0.3s ease-in-out;
+  top: -77px;
+} */
+.card-show {
+  padding: 20px;
+  z-index: 100;
+  border-radius: 5px;
+  background: #4c5264;
+  height: 363px;
+  position: absolute;
+  left: 260px;
+  width: 390px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  top: -80px;
+
+}
+
+.card-show.show {
+  opacity: 1;
+}
+
+
+
+.card-show:before {
+  content: "";
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  background-color: #4c5264;
+  transform: rotate(45deg);
+  top: 121px;
+  left: -12px;
+  z-index: 100;
+
+}
+
+
+.card-show .info {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: justify;
+  color: #eee;
+  gap: 10px;
+}
+
+.card-show .info h2 {
+  color: #00eeff;
+  font-size: 18px;
+}
+
+.card-show .info li,
+.card-show .info p {
+  font-size: 12.5px;
+  list-style: none;
+}
+
+.card-show .linhas-pesquisas {
+  padding: 0 18px;
+}
+
+.card-show .info li:before {
+  content: "\2714";
+  display: inline-block;
+  width: 1em;
+  margin-right: 0.5em;
+}
+
+
+.card-show .info .btn-cad {
+  padding: 10px;
+  color: black;
+  border-radius: 5px;
+  font-weight: 600;
+  background: #fff;
+  box-shadow: 0 0 1px #fff;
+  border: 0;
+  cursor: pointer;
+  margin-top: 6px;
+}
+
+.card-show .info .inative-btn {
+  background: #c3c3c3;
+  box-shadow: 0 0 1px #c3c3c3;
+  cursor: auto;
+}
+
+.card-show .info .btn-cad:hover {
+  background: #00eeff;
+  box-shadow: 0 0 3px #00eeff;
+}
+
+.card-show .info .inative-btn:hover {
+  background: #c3c3c3;
+  box-shadow: 0 0 0;
+}
+
+.text-main {
+  color: #fff;
+  font-size: 25px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.text-main span {
+  color: #00eeff;
+}
+
+.swiper-navBtn::before,
+.swiper-navBtn::after {
+  font-size: 18px;
+}
+
+.swiper-pagination-bullet {
+  background-color: #00eeff;
+}
+
+@media screen and (max-width: 768px) {
+  .swiper-navBtn {
+    display: none;
+  }
+}

@@ -112,6 +112,7 @@ function getStars(ideiaId) {
 
 
 function star_feedback(ideiaId) {
+    var aux = 0;
     // const stars = document.querySelectorAll(".stars i");
     const stars = document.querySelectorAll(`#stars-${ideiaId} i`);
     let initialStars = ideias[ideiaId].stars || [false, false, false, false, false];
@@ -121,6 +122,7 @@ function star_feedback(ideiaId) {
         // Define o estado inicial das estrelas de acordo com o valor recuperado do local storage
         star.classList.toggle("active", initialStars[index1]);
 
+        console.log(index1);
     });
 }
 
